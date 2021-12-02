@@ -1,7 +1,7 @@
 jobs:
   deploy:
     docker:
-      - image: cimg/base
+      - image: cimg/base:stable
     resource_class: small
     steps:
       - attach_workspace:
