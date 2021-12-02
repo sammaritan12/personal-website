@@ -1,21 +1,27 @@
+version: 2.1
+orbs:
+  hugo: circleci/hugo@0.2
+  aws-s3: circleci/aws-s3@3.0
+
 jobs:
   deploy:
     docker:
       - image: cimg/base:stable
     resource_class: small
+    environment:
+      BUCKET_NAME: s3://markpatricio-personal-web-statics
     steps:
       - attach_workspace:
           at: site
-      - run: ls -lah site/public
-orbs:
-  hugo: circleci/hugo@0.2
-version: 2.1
+      - aws-s3/sync:
+          from: site/public
+          to: $BUCKET_NAME
+
 workflows:
   main:
     jobs:
       - hugo/build:
           html-proofer: true
-          # source: /
           version: '0.55'
       - deploy:
           filters:
