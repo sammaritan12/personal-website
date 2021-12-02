@@ -1,7 +1,7 @@
 ---
 title: "Personal website setup"
 date: 2021-12-01T23:21:00+11:00
-draft: true
+draft: false
 description:  "How this website was created and the pipeline for it"
 tldr: "Hugo + Forestry + CircleCI + Terraform + AWS = Awesome"
 ---
