@@ -6,7 +6,7 @@ jobs:
     steps:
       - attach_workspace:
           at: site
-      - run: ls -lah site
+      - run: ls -lah site/public
 orbs:
   hugo: circleci/hugo@0.2
 version: 2.1
