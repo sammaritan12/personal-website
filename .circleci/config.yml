@@ -14,12 +14,12 @@ workflows:
     jobs:
       - hugo/build:
           html-proofer: true
-          source: /
+          # source: /
           version: '0.55'
       - deploy:
           filters:
             branches:
-              only: master
+              only: main
           requires:
             - hugo/build
 
