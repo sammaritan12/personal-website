@@ -8,14 +8,12 @@ jobs:
     docker:
       - image: cimg/base:stable
     resource_class: small
-    environment:
-      BUCKET_NAME: s3://markpatricio-personal-web-statics
     steps:
       - attach_workspace:
           at: site
       - aws-s3/sync:
           from: site/public
-          to: $BUCKET_NAME
+          to: s3://markpatricio-personal-web-statics
 
 workflows:
   main:
