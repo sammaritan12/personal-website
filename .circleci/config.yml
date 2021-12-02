@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+      REGION: ap-southeast-2
+      BUCKET_NAME: markpatricio-personal-web-statics
+    steps:
+      - run: apt-get update && apt-get install -y --no-install-recommends git
+      - checkout
+      - run: git submodule sync && git submodule update --init
+      - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.0.1/s3deploy_2.0.1_Linux-64bit.tar.gz | tar xvz
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html --empty-alt-ignore --disable-external
+      - deploy:
+          name: deploy
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "main" ]; then
+              ./s3deploy -source=$HUGO_BUILD_DIR -region=$REGION -bucket=$BUCKET_NAME -path=/
+            else
+              echo "Not main branch, dry run only"
+            fi
