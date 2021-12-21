@@ -1,4 +1,4 @@
-baseURL = 'http://markpatricio.com/'
+baseURL = 'https://markpatricio.com/'
 languageCode = 'en-au'
 title = 'Mark Patricio'
 theme="archie"
