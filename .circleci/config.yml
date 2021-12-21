@@ -13,6 +13,7 @@ jobs:
           at: site
       - aws-s3/sync:
           arguments: |
+            --acl public-read \
             --cache-control "max-age=86400"
           from: site/public
           to: s3://markpatricio-personal-web-statics
