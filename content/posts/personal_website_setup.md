@@ -57,6 +57,8 @@ This means that the bucket is publicly accessible and any requests from CloudFro
 
 At the time of writing this has not been implemented but if you wish to learn more about it you can check out [AWS' support documentation](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-serve-static-website/ "Hosting static website with S3 and CloudFront") regarding this.
 
+![Diagram of infrastucture used to create website](/uploads/untitled-diagram-page-2-drawio.png "Infrastructure Diagram")
+
 Additionally we add ACM certificates so we can use HTTPS on a custom alias. Once we've connected the alias record to the CloudFront distribution we're almost done.
 
 We must then connect our domain registrar with the public Route53 zone we've created. This is done by changing the DNS of our domain to use AWS provided nameservers. Once propagated our website should be available for the world to see.
