@@ -2,7 +2,9 @@
 title: Creating a personal website with Hugo, S3, CloudFront, Forestry with a fully
   functioning CI/CD pipeline
 date: 2021-12-01T23:21:00.000+11:00
-description: How this website was created and the pipeline for it
+description: Inspired by the JAMstack, I created a fully functioning blog and personal
+  website that's static, builds on the main branch and  gets deployed worldwide through
+  a CDN - all without needing to host a webserver.
 tldr: Hugo + Forestry + CircleCI + Terraform + AWS = Awesome
 
 ---
