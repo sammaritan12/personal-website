@@ -18,7 +18,6 @@ jobs:
             --cache-control "max-age=86400"
           from: site/public
           to: s3://markpatricio-personal-web-statics
-      - aws-cli/install
       - aws-cli/setup
       - run: aws cloudfront create-invalidation --distribution-id E24D30KWM2UPJG --paths "/*"
 
