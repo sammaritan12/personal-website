@@ -14,3 +14,6 @@ fields:
 - type: text
   name: tldr
   label: tldr
+- type: list
+  name: tags
+  label: tags
