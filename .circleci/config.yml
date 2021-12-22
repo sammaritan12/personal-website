@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   hugo: circleci/hugo@0.2
   aws-s3: circleci/aws-s3@3.0
+  aws-cli: circleci/aws-cli@2.0.6
 
 jobs:
   deploy:
@@ -16,6 +17,12 @@ jobs:
             --cache-control "max-age=86400"
           from: site/public
           to: s3://markpatricio-personal-web-statics
+  invalidate-cloudfront-distribution:
+    executor: aws-cli/default
+    steps:
+      - checkout
+      - aws-cli/setup
+      - run: aws cloudfront create-invalidation --distribution-id E24D30KWM2UPJG --paths "/*"
 
 workflows:
   main:
@@ -28,4 +35,11 @@ workflows:
             branches:
               only: main
           requires:
+            - hugo/build
+      - invalidate-cloudfront-distribution:
+          filters:
+            branches:
+              only: main
+          requires:
+            - deploy
             - hugo/build
