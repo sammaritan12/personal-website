@@ -18,10 +18,7 @@ jobs:
             --cache-control "max-age=86400"
           from: site/public
           to: s3://markpatricio-personal-web-statics
-  invalidate-cloudfront-distribution:
-    executor: aws-cli/default
-    steps:
-      - checkout
+      - aws-cli/install
       - aws-cli/setup
       - run: aws cloudfront create-invalidation --distribution-id E24D30KWM2UPJG --paths "/*"
 
@@ -36,11 +33,4 @@ workflows:
             branches:
               only: main
           requires:
-            - hugo/build
-      - invalidate-cloudfront-distribution:
-          filters:
-            branches:
-              only: main
-          requires:
-            - deploy
             - hugo/build
