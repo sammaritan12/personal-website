@@ -6,6 +6,7 @@ description: Inspired by the JAMstack, I created a fully functioning blog and pe
   website that's static, builds on the main branch and  gets deployed worldwide through
   a CDN - all without needing to host a webserver.
 tldr: Hugo + Forestry + CircleCI + Terraform + AWS = Awesome
+tags: [hugo, terraform, aws, circleci]
 
 ---
 Creating a personal website for developers is nowadays often mandatory - showing your skill and expertise to fellow developers and prospective employers. But oftentimes creating a dynamic server side rendered website is overkill and requires maintenance and upkeep.
