@@ -15,6 +15,8 @@ Yet before the end of the year I managed to be proficient within what my team wa
 
 My workplace gave me a subscription to Linux Academy, an online video course which included labs and quizzes to sharpen up my knowledge. Every morning before work started I would watch the videos, take quizzes and do the labs.
 
+![](/uploads/aws-certs.png)
+
 Every morning without fail up until I finished my first AWS certificate I did this. I only did this for an hour every morning during work days. Sometimes I managed to cover a lot, sometimes I could only do a little. The main point was that I did something every single day.
 
 Being consistent meant that I didn't have times where I forgot the content because it was too long in-between study sessions, neither did I become super burnt out because I started cramming 8 hours of study into my day in addition to my normal day job. A steady pace allowed me to constantly get myself up to date with the content.
@@ -25,9 +27,9 @@ No matter how you learn (video, text, in-person or online) make sure it's consis
 
 I was fortunate enough to be placed in a rotation where I lived and breathed Cloud for the 6 months I was there. Being able to translate what you learn in theory to what it is in practice is invaluable.
 
-Once you figure out something practically it goes from something that you have to remember as a concept to something that you automatically think of without have to consciously do so.
+Once you figure out something practically it goes from something that you have to remember as a concept to something that you automatically think of without having to consciously do so.
 
-For example, an IAM policy consists of multiple items. If you don't write or read IAM policies on a frequent basis you may not understand why you need a wildcard when wanting to use `GetObject` in the resources section, but don't need one when using `ListBucket`.
+For example, an IAM policy consists of multiple items. If you don't write or read IAM policies on a frequent basis you may not understand why you need a wildcard in an S3 ARN when wanting to use `GetObject` in the resources section, but don't need one when using `ListBucket`.
 
 Exposure to AWS is key to understanding how AWS works, so make sure to create projects with it if you aren't using it for your day job.
 
@@ -38,6 +40,8 @@ This is probably the key to passing the exams. The exams themselves have a forma
 Some questions will ask you to focus on cost, high availability, etc. Other questions will ask you what is the incorrect answer. Others will ask for several answers. Make sure to read every single question properly taking into account qualifying words.
 
 There are many practice exams, some good, some bad. The one that I've found to be the most similar to the actual exams are those from Jon Bonso at [Tutorials Dojo](https://tutorialsdojo.com). In some circumstances his exams are actually more difficult than the actual exam so if you can pass them, you can pass the exam.
+
+![](/uploads/aws-practice-exams.png)
 
 The key is to take them in exam like conditions, then write down and practice on the questions and theories that you struggled on. Don't retake the same practice exam on the same day - you want to understand the content not memorise the questions.
 
