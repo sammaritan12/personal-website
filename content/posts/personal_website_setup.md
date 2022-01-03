@@ -1,7 +1,7 @@
 ---
 title: Creating a personal website with Hugo, S3, CloudFront, Forestry with a fully
   functioning CI/CD pipeline
-date: 2021-12-29T11:26:00+11:00
+date: 2021-12-29T11:26:00.000+11:00
 description: Inspired by the JAMstack, I created a fully functioning blog and personal
   website that's static, builds on the main branch and  gets deployed worldwide through
   a CDN - all without needing to host a webserver.
@@ -67,5 +67,7 @@ At the time of writing this has not been implemented but if you wish to learn mo
 Additionally we add ACM certificates so we can use HTTPS on a custom alias. Once we've connected the alias record to the CloudFront distribution we're almost done.
 
 We must then connect our domain registrar with the public Route53 zone we've created. This is done by changing the DNS of our domain to use AWS provided nameservers. Once propagated our website should be available for the world to see.
+
+**EDIT:** As of 03/01/2021 I am no longer using Route53 and am using Namecheap instead, this is due to wanting to make use of the free email redirect. This means that the ACM certificate validation is now semi manual.
 
 The entire infrastructure was created using [Terraform](https://www.terraform.io/ "Terraform"), my preferred IaC (Infrastructure as Code) tool. You can check out how I created my modules, organised my workspace and how the infrastructure is set up [here.](https://github.com/sammaritan12/terraform-personal-website "Terraform Personal Website")
