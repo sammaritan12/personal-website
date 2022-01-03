@@ -17,3 +17,5 @@ fields:
 - type: list
   name: tags
   label: tags
+pages:
+- content/posts/how-i-got-all-associate-level-aws-certificates-in-1-year.md
