@@ -4,8 +4,13 @@ title = 'Mark Patricio'
 theme="archie"
 copyright = "© Mark Patricio"
 
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
 [params]
-  mode="auto"
+  mode="toggle"
   description = "👋 Hey I’m Mark, and I’m a DevOps Engineer. ☁️ I’m interested in all things cloud, CI/CD and automation. 🐙 Currently working at Octopus Energy making the world a greener place."
 
 # Social Tags
