@@ -15,6 +15,17 @@ name = "GitHub"
 icon = "github"
 url = "https://github.com/sammaritan12"
 
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/markpatricio/"
+
+
+[[params.social]]
+name = "YouTube"
+icon = "youtube"
+url = "https://www.youtube.com/markpatricio"
+
 # Main menu Items
 
 [[menu.main]]
