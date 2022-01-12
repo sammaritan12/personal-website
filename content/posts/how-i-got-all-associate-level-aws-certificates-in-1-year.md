@@ -1,7 +1,6 @@
 +++
-date = 2022-01-03T01:00:00Z
+date = 2022-01-11T06:21:00Z
 description = "Before the end of the year I managed to be proficient within what my team was working on and I obtained all three AWS associate certificates (Solutions Architect, Developer and SysOps Administrator). So how did I do it?"
-draft = true
 tags = ["certification", "aws"]
 title = "How I got all Associate level AWS certificates in 1 year"
 tldr = "One associate certificate overlaps with the others, plus a global pandemic helps things along."
